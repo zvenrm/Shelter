@@ -1,0 +1,96 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Georgia;
+}
+.wrapper{
+    width: 1280px;
+    margin: 0 auto;
+    background: url('../../assets/images/noise_lines_transparent.png'), radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%), #211F20;
+}
+.header {
+}
+.container {
+    width: 1280px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+.header-container{
+    height: 120px;
+    border: 1px solid red;
+    padding-top: 60px;
+}
+.header-content{
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 186px;
+    height: 60px;
+}
+h1{
+    font-weight: normal;
+    font-size: 32px;
+    color: #F1CDB3;
+    letter-spacing: 0.06em;
+    line-height: 35px;
+}
+.logo-text{
+    font-family: Arial;
+    font-size: 13px;
+    letter-spacing: 0.1em;
+    color: #FFFFFF;
+    text-align: center;
+    width: 100%;
+    line-height: 15px;
+}
+.nav {
+    width: 441px;
+    height: 25px;
+}
+.nav-items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style-type: none;
+}
+.nav-item {
+}
+.nav-link {
+    font-family: Arial;
+    text-decoration: none;
+    font-size: 15px;
+    color: #CDCDCD;
+}
+.active{
+    color: #FAFAFA;
+    position: relative;
+}
+
+.active::after{
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #F1CDB3;
+}
+.main {
+}
+.not-only{
+    height: 788px;
+    border: 1px solid blue;
+}
+.footer {
+}
