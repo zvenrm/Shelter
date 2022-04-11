@@ -257,6 +257,10 @@ h1{
     background-color: #FDDCC4;
     border-color: #FDDCC4;
 }
+.item-img{
+    border-top-left-radius: 9px;
+    border-top-right-radius: 9px;
+}
 .slider-title {
     font-family: 'Georgia';
     font-size: 20px;
