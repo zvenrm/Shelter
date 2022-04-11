@@ -4,6 +4,11 @@
 }
 
 @font-face {
+    font-family: 'Arial Italic';
+    src: url("../../assets/fonts/arial/arial-italic.ttf");
+}
+
+@font-face {
     font-family: Georgia;
     src: url("../../assets/fonts/georgia/georgia-regular.ttf");
 }
@@ -138,9 +143,6 @@ h1{
     letter-spacing: 0.06em;
 }
 
-.main {
-}
-
 .about-container{
     height: 588px;
     padding-top: 80px;
@@ -150,8 +152,6 @@ h1{
     align-items: center;
 }
 
-.about {
-}
 .about-image {
     margin-right: 120px;
 }
@@ -228,8 +228,6 @@ h1{
     justify-content: space-between;
     align-items: center;
 }
-.katrine {
-}
 .slider-title {
     font-family: 'Georgia';
     font-size: 20px;
@@ -248,11 +246,6 @@ h1{
     letter-spacing: 0.06em;
     color: #292929;
 }
-.jennifer {
-}
-.woody {
-}
-
 .slider-right {
     background-image: url('../../assets/icons/arrow.svg');
     background-repeat: no-repeat;
@@ -269,4 +262,181 @@ h1{
     letter-spacing: 0.06em;
     color: #292929;
     border: none;
+}
+
+.help-container {
+    padding-top: 80px;
+    padding-bottom: 100px;
+}
+.help-title{
+    text-align: center;
+    margin-bottom: 58px;
+}
+.item-title {
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 115%;
+    letter-spacing: 0.06em;
+    color: #545454;
+}
+.help-items {
+    width: 100%;
+    height: 281px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 120px;
+    row-gap: 55px;
+}
+.help-item {
+    height: 113px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.help-logo{
+    width: 60px;
+    height: 60px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+.logo-food {
+    background-image: url('../../assets/icons/icon-pet-food.svg');
+}
+.logo-transport {
+    background-image: url('../../assets/icons/icon-transportation.svg');
+}
+.logo-toys {
+    background-image: url('../../assets/icons/icon-toys.svg');
+}
+.logo-bowl {
+    background-image: url('../../assets/icons/icon-bowls-and-cups.svg');
+}
+.logo-shamp {
+    background-image: url('../../assets/icons/icon-shampoos.svg');
+}
+.logo-vitam {
+    background-image: url('../../assets/icons/icon-vitamins.svg');
+}
+.logo-medi {
+    background-image: url('../../assets/icons/icon-medicines.svg');
+}
+.logo-collar {
+    background-image: url('../../assets/icons/icon-collars-leashes.svg');
+}
+.logo-area {
+    background-image: url('../../assets/icons/icon-sleeping-area.svg');
+}
+
+.donation {
+    background: #F6F6F6;
+}
+.donation-container {
+    padding: 80px 183px 100px 183px;
+}
+.donation-content {
+    display: flex;
+    align-items: center;
+}
+.donation-image {
+    margin-right: 30px;
+}
+.bank-info {
+    margin: 20px 0;
+    font-family: 'Georgia';
+    font-size: 15px;
+    line-height: 110%;
+    letter-spacing: 0.06em;
+    color: #545454;
+}
+.donation-card {
+    margin-bottom: 20px;
+    max-width: 349px;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 15px;
+    background: #F1CDB3;
+    border-radius: 9px;
+}
+.card-ico{
+    width: 30px;
+    height: 23px;
+    background-image: url('../../assets/icons/credit-card.svg');
+}
+.card-number {
+    font-family: 'Georgia';
+    font-size: 20px;
+    line-height: 115%;
+    letter-spacing: 0.06em;
+    color: #545454;
+}
+.donation-text {
+    font-family: 'Arial Italic';
+    font-size: 12px;
+    line-height: 18px;
+    color: #B2B2B2;
+}
+.footer {
+    background: url('../../assets/images/noise_lines_transparent.png'), radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%), #211F20;
+}
+.footer-container {
+    padding: 40px 40px 0 40px;
+    display: flex;
+    justify-content: space-between;
+}
+.footer-questions {
+    padding-top: 16px;
+    max-width: 279px;
+    max-height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.footer-title{
+    color: #FFFFFF;
+}
+.footer-icon{
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    flex-shrink: 0;
+}
+.email-icon {
+    width: 40px;
+    height: 32px;
+    background-image: url('../../assets/icons/icon-email.svg');
+}
+.footer-text{
+    font-family: 'Georgia';
+    font-size: 20px;
+    line-height: 115%;
+    letter-spacing: 0.06em;
+    color: #F1CDB3;
+}
+.telephone-icon {
+    width: 40px;
+    height: 32px;
+    background-image: url('../../assets/icons/icon-phone.svg');
+}
+.footer-item{
+    display: flex;
+    column-gap: 20px;
+    align-items: center;
+}
+.footer-map {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 16px;
+    max-width: 302px;
+    max-height: 250px;
+}
+.map-icon {
+    width: 22px;
+    height: 32px;
+    background-image: url('../../assets/icons/icon-marker.svg');
 }
