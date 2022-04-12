@@ -252,6 +252,7 @@ h1{
 }
 .slider-item:hover{
     background: #FFFFFF;
+    box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
 }
 .slider-item:hover .slider-btn{
     background-color: #FDDCC4;
