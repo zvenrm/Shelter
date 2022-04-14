@@ -30,7 +30,7 @@ body{
     background: #FFFFFF;
 }
 .container{
-    width: 1280px;
+    max-width: 1280px;
     margin: 0 auto;
     padding: 0 40px;
 }
@@ -284,4 +284,34 @@ h1{
 }
 .map-linq{
     text-decoration: none;
+}
+
+@media (max-width: 1279px) and (min-width: 768px){
+    .header {
+        position: static;
+    }
+    .container{
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    .header-container {
+        height: 120px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    .ourfriends-container{
+        padding-left: calc((100% - 620px) / 2);
+        padding-right: calc((100% - 620px) / 2);
+        padding-bottom: 76px;
+        row-gap: 30px;
+    }
+    .ourfriends-item:nth-child(7){
+        display: none;
+    }
+    .ourfriends-item:nth-child(8){
+        display: none;
+    }
+    .ourfriends-buttons {
+        margin-top: 10px;
+    }
 }
