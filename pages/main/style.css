@@ -603,4 +603,21 @@ h1{
         margin-right: 0;
         order: 1;
     }
+    .footer-container {
+        padding-top: 14px;
+        padding-left: calc((100% - 650px) / 2);
+        padding-right: calc((100% - 650px) / 2);
+        flex-wrap: wrap;
+        justify-content: center;
+        column-gap: 60px;
+        row-gap: 65px;
+    }
+    .footer-questions {
+        padding-top: 16px;
+        width: 279px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        row-gap: 40px;
+    }
 }
