@@ -390,6 +390,9 @@ h1{
     display: flex;
     align-items: center;
 }
+.donation-info{
+    width: 380px;
+}
 .donation-image {
     margin-right: 30px;
 }
@@ -583,5 +586,21 @@ h1{
     }
     .help-item{
         width: 170px;
+    }
+    .donation-container {
+        padding-left: 131px;
+        padding-right: 132px;
+        display: flex;
+        justify-content: center;
+    }
+    .donation-content {
+        width: 505px;
+        flex-wrap: wrap;
+        justify-content: center;
+        row-gap: 60px;
+    }
+    .donation-image {
+        margin-right: 0;
+        order: 1;
     }
 }
