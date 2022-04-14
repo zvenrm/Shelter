@@ -547,4 +547,21 @@ h1{
         margin-right: 0;
         order: 1;
     }
+    .ourfriends-container{
+        padding-top: 78px;
+        row-gap: 60px;
+        height: auto;
+    }
+    .slider{
+        justify-content: center;
+        column-gap: 12px;
+    }
+    .slider-items{
+        width: auto;
+        justify-content: center;
+        column-gap: 40px;
+    }
+    .slider-item:last-child{
+        display: none;
+    }
 }
