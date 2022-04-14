@@ -287,9 +287,6 @@ h1{
 }
 
 @media (max-width: 1279px) and (min-width: 768px){
-    .header {
-        position: static;
-    }
     .container{
         padding-left: 30px;
         padding-right: 30px;
@@ -313,5 +310,22 @@ h1{
     }
     .ourfriends-buttons {
         margin-top: 10px;
+    }
+    .footer-container {
+        padding-top: 14px;
+        padding-left: calc((100% - 650px) / 2);
+        padding-right: calc((100% - 650px) / 2);
+        flex-wrap: wrap;
+        justify-content: center;
+        column-gap: 60px;
+        row-gap: 65px;
+    }
+    .footer-questions {
+        padding-top: 16px;
+        width: 279px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        row-gap: 40px;
     }
 }
