@@ -564,4 +564,24 @@ h1{
     .slider-item:last-child{
         display: none;
     }
+    .help-container{
+        padding-left: 69px;
+        padding-right: 69px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        row-gap: 57px;
+    }
+    .help-title{
+        margin-bottom: 0;
+    }
+    .help-items {
+        width: 630px;
+        height: auto;
+        column-gap: 60px;
+    }
+    .help-item{
+        width: 170px;
+    }
 }
