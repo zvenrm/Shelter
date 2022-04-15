@@ -661,4 +661,30 @@ h1{
     .header-burger{
         display: block;
     }
+    .notonly-title{
+        font-size: 25px;
+        line-height: 130%;
+        text-align: center;
+        letter-spacing: 0.06em;
+    }
+    .notonly-content{
+        width: 300px;
+        row-gap: 105px;
+    }
+    .notonly-info{
+        width: 300px;
+        height: 296px;
+    }
+    .notonly-text{
+        line-height: 160%;
+        text-align: center;
+    }
+    .notonly-image{
+        height: 272px;
+        left: calc(50% - 260px/2);
+    }
+    .notonly-img{
+        width: 260px;
+        height: 271.77px;
+    }
 }
