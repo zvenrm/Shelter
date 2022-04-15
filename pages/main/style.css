@@ -687,4 +687,37 @@ h1{
         width: 260px;
         height: 271.77px;
     }
+    .about-container{
+        padding-top: 42px;
+        padding-bottom: 42px;
+        row-gap: 40px;
+    }
+    .about-title{
+        font-size: 25px;
+        line-height: 130%;
+        letter-spacing: 0.06em;
+        text-align: center;
+    }
+    .about-info {
+        width: 270px;
+        height: auto;
+        justify-content: center;
+    }
+    .about-text{
+        text-align: justify;
+        margin-top: 25px;
+        margin-bottom: 22px;
+    }
+    .about-text:last-child{
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    .about-image{
+        width: auto;
+        height: auto;
+    }
+    .about-image img{
+        width: 260px;
+        height: 354px;
+    }
 }
