@@ -387,4 +387,28 @@ h1{
         margin: 0;
         column-gap: 10px;
     }
+    .footer-container {
+        padding-left: calc((100% - 300px) / 2);
+        padding-right: calc((100% - 300px) / 2);
+        row-gap: 40px;
+    }
+    .footer-title{
+        padding: 0 15px;
+        font-size: 25px;
+        line-height: 130%;
+        text-align: center;
+    }
+    .footer-questions {
+        align-items: center;
+    }
+    .footer-map{
+        width: 300px;
+        height: auto;
+        padding: 0;
+        row-gap: 38px;
+    }
+    .footer-image img{
+        width: 260px;
+        height: auto;
+    }
 }
