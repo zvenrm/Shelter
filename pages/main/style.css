@@ -689,7 +689,7 @@ h1{
     }
     .about-container{
         padding-top: 42px;
-        padding-bottom: 42px;
+        padding-bottom: 38px;
         row-gap: 40px;
     }
     .about-title{
@@ -719,5 +719,65 @@ h1{
     .about-image img{
         width: 260px;
         height: 354px;
+    }
+    .ourfriends-container{
+        padding-top: 42px;
+        padding-bottom: 42px;
+        row-gap: 42px;
+        padding-left: calc((100% - 300px) / 2);
+        padding-right: calc((100% - 300px) / 2);
+    }
+    .ourfriends-title{
+        font-size: 25px;
+        line-height: 130%;
+    }
+    .slider-item:nth-child(2){
+        display: none;
+    }
+    .slider{
+        width: 270px;
+        flex-wrap: wrap;
+        row-gap: 20px;
+        column-gap: 80px;
+    }
+    .slider-left{
+        order: 2;
+    }
+    .slider-right{
+        order: 3;
+    }
+    .help-container{
+        padding-top: 42px;
+        padding-bottom: 42px;
+        row-gap: 41px;
+        padding-left: calc((100% - 290px) / 2);
+        padding-right: calc((100% - 290px) / 2);
+    }
+    .help-title{
+        font-size: 25px;
+        line-height: 130%;
+    }
+    .help-items {
+        width: 290px;
+        height: auto;
+        justify-content: flex-start;
+        column-gap: 30px;
+        row-gap: 31px;
+    }
+    .help-item{
+        width: 130px;
+        height: auto;
+        row-gap: 20px;
+    }
+    .help-logo{
+        width: 50px;
+        height: 50px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+    }
+    .item-title{
+        font-size: 15px;
+        line-height: 110%;
     }
 }
