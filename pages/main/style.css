@@ -114,7 +114,6 @@ h1{
     position: relative;
     margin-right: 43px;
     display: none;
-    /* z-index: 15; */
 }
 .burger-line {
     display: block;
@@ -178,6 +177,7 @@ h1{
     width: 207px;
     height: 52px;
     background: #F1CDB3;
+    color: #292929;
     border: none;
     border-radius: 100px;
     font-size: 17px;
