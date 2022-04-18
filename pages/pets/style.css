@@ -314,7 +314,7 @@ h1{
     text-decoration: none;
 }
 
-@media (max-width: 1279px) and (min-width: 768px){
+@media (max-width: 1279px){
     .container{
         padding-left: 30px;
         padding-right: 30px;
@@ -368,5 +368,23 @@ h1{
     }
     .header-burger{
         display: block;
+    }
+    .ourfriends-container{
+        padding-top: 42px;
+        padding-bottom: 42px;
+        padding-left: calc((100% - 300px) / 2);
+        padding-right: calc((100% - 300px) / 2);
+        row-gap: 42px;
+    }
+    .ourfriends-title{
+        font-size: 25px;
+        line-height: 130%;
+    }
+    .ourfriends-item:nth-child(4), .ourfriends-item:nth-child(5), .ourfriends-item:nth-child(6){
+        display: none;
+    }
+    .ourfriends-buttons{
+        margin: 0;
+        column-gap: 10px;
     }
 }
