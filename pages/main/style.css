@@ -26,6 +26,7 @@ body{
 }
 
 .head {
+    position: relative;
     background: url('../../assets/images/noise_lines_transparent.png'), radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%), #211F20;
 }
 
@@ -50,12 +51,14 @@ body{
     text-decoration: none;
 }
 .logo{
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     flex-wrap: wrap;
     width: 186px;
     height: 60px;
+    transition: 0.5s ease-in;
 }
 h1{
     font-weight: normal;
@@ -114,6 +117,7 @@ h1{
     position: relative;
     margin-right: 43px;
     display: none;
+    z-index: 11;
 }
 .burger-line {
     display: block;
@@ -133,6 +137,16 @@ h1{
 
 .burger-line3{
     bottom: 0;
+}
+
+.overlay{
+    position: fixed;
+    /* display: none; */
+    width: 100vw;
+    height: 100vh;
+    background: rgba(41, 41, 41, 0.6);
+    transform: translateX(100%);
+    transition: 0.5s ease-in;
 }
 
 .notonly-container{
@@ -651,15 +665,53 @@ h1{
 }
 
 @media (max-width: 767px){
+    .body-hidden {
+        overflow: hidden;
+    }
     .container{
         padding-left: 10px;
         padding-right: 10px;
     }
+    .logo-open{
+        margin-left: calc(100vw - 320px);
+        z-index: 11;
+    }
     .nav{
-        display: none;
+        display: flex;
+        align-items: center;
+        position: fixed;
+        height: 100vh;
+        width: 320px;
+        top: 0;
+        right: 0;
+        background: #292929;
+        z-index: 10;
+        transform: translateX(100%);
+        transition: 0.5s;
+    }
+    .nav-open{
+        transform: translateX(0);
+        /* box-shadow: -100px 0px 50px 100vw rgba(41, 41, 41, 0.6); */
+    }
+    .nav-items{
+        margin: auto 0;
+        flex-wrap: wrap;
+        row-gap: 40px;
+        justify-content: center;
+        align-items: center;
+    }
+    .nav-link{
+        font-size: 32px;
+        line-height: 160%;
     }
     .header-burger{
         display: block;
+    }
+    .overlay-block{
+        display: block;
+        top: 0;
+        left: 0;
+        transform: translateX(0);
     }
     .notonly-title{
         font-size: 25px;
