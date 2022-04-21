@@ -1,7 +1,6 @@
 const burger = document.querySelector('.header-burger')
 const burgerMenu = document.querySelector('.nav')
 const logo = document.querySelector('.logo')
-const navLink = document.querySelector('.nav-item')
 const overlay = document.querySelector('.overlay')
 
 
@@ -10,6 +9,7 @@ function toggleMenu() {
     logo.classList.toggle('logo-open')
     document.body.classList.toggle('body-hidden')
     overlay.classList.toggle('overlay-block')
+    burger.classList.toggle('burger-open')
 }
 
 burger.addEventListener('click', toggleMenu)
