@@ -143,24 +143,8 @@ h1{
     bottom: 0;
 }
 
-/* .header-burger.burger-open .burger-line2 {
-    transform: rotate(-90deg);
-    left: 15px;
-}
-
-.header-burger.burger-open .burger-line1 {
-    transform: rotate(-90deg);
-    left: 5px;
-}
-
-.header-burger.burger-open .burger-line3 {
-    transform: rotate(-90deg);
-    left: 25px;
-} */
-
 .overlay{
     position: fixed;
-    /* display: none; */
     width: 100vw;
     height: 100vh;
     background: rgba(41, 41, 41, 0.6);
@@ -710,7 +694,6 @@ h1{
     }
     .nav-open{
         transform: translateX(0);
-        /* box-shadow: -100px 0px 50px 100vw rgba(41, 41, 41, 0.6); */
     }
     .nav-items{
         margin: auto 0;
