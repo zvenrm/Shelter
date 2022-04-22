@@ -280,10 +280,21 @@ h1{
     background-repeat: no-repeat;
     background-position: center;
 }
+.slider-content{
+    
+    display: flex;
+    width: 990px;
+    overflow: hidden;
+}
+.items{
+    position: relative;
+    left: -990px;
+    display: flex;
+}
 .slider-items {
     width: 990px;
     display: flex;
-    justify-content: space-between;
+    column-gap: 90px;
 }
 .slider-item {
     width: 270px;
@@ -549,6 +560,24 @@ h1{
 .map-linq{
     text-decoration: none;
 }
+@keyframes move-right {
+    from {left: -990px;}
+    to {left: -1980px;}
+}
+.transition-right {
+    animation-name: move-right;
+    animation-duration: 1s;
+}
+
+@keyframes move-left {
+    from {left: -990px;}
+    to {left: 0px;}
+}
+
+.transition-left {
+    animation-name: move-left;
+    animation-duration: 1s;
+}
 
 
 @media (max-width: 1279px){
@@ -604,8 +633,14 @@ h1{
         justify-content: center;
         column-gap: 12px;
     }
+    .slider-content{
+        width: 580px;
+    }
+    .items{
+        left: -580px;
+    }
     .slider-items{
-        width: auto;
+        width: 580px;
         justify-content: center;
         column-gap: 40px;
     }
@@ -664,6 +699,15 @@ h1{
         flex-direction: column;
         justify-content: center;
         row-gap: 40px;
+    }
+    @keyframes move-right {
+        from {left: -580px;}
+        to {left: -1160px;}
+    }
+    
+    @keyframes move-left {
+        from {left: -580px;}
+        to {left: 0px;}
     }
 }
 
@@ -794,6 +838,12 @@ h1{
         row-gap: 20px;
         column-gap: 80px;
     }
+    .slider-content, .slider-items{
+        width: 270px;
+    }
+    .items{
+        left: -270px;
+    }
     .slider-left{
         order: 2;
     }
@@ -902,5 +952,14 @@ h1{
     .footer-image img{
         width: 260px;
         height: auto;
+    }
+    @keyframes move-right {
+        from {left: -270px;}
+        to {left: -540px;}
+    }
+    
+    @keyframes move-left {
+        from {left: -270px;}
+        to {left: 0px;}
     }
 }
