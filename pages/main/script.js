@@ -47,8 +47,6 @@ while(slideArr.length < 3){
         slideArr.push(number)
     }
 }
-console.log(slideArr)
-
 
 for (let i = 0; i < itemActive.children.length; i++){
     itemActive.children[i].children[0].src = pets[slideArr[i]].img
@@ -91,7 +89,7 @@ const createSliderItem = (item) => {
         const card = createCardTemplate();
         const cardImg = document.createElement("img")
         cardImg.classList.add('item-img')
-        cardImg.src = `../../assets/images/${pets[slideArr[i]].img.slice(20)}`
+        cardImg.src = pets[slideArr[i]].img
         const cardTitle = document.createElement("h3")
         cardTitle.classList.add('slider-title')
         cardTitle.innerHTML = pets[slideArr[i]].name
