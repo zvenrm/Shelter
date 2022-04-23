@@ -3,13 +3,25 @@ const burger = document.querySelector('.header-burger')
 const burgerMenu = document.querySelector('.nav')
 const logo = document.querySelector('.logo')
 const overlay = document.querySelector('.overlay')
-
+const modal = document.querySelector('.modal')
 const btnLeft = document.querySelector('.slider-left')
 const btnRight = document.querySelector('.slider-right')
 const slider = document.querySelector('.items')
+let sliderCards = document.querySelectorAll('.slider-item')
+const cardClose = document.querySelector('.card-close')
 const itemLeft = document.querySelector('#item-left')
 const itemRight = document.querySelector('#item-right')
 const itemActive = document.querySelector('#item-active')
+
+const cardImg = document.querySelector('.card-img')
+const cardName = document.querySelector('.card-name')
+const cardType = document.querySelector('.type')
+const cardBreed = document.querySelector('.breed')
+const cardText = document.querySelector('.card-text')
+const cardAge = document.querySelector('#age')
+const cardInoculations = document.querySelector('#inoculations')
+const cardDiseases = document.querySelector('#diseases')
+const cardParasites = document.querySelector('#parasites')
 
 /*------предзагрузка картинок------*/
 
@@ -106,6 +118,9 @@ const moveRight = () => {
     slider.classList.add("transition-right")
     btnLeft.removeEventListener("click", moveLeft)
     btnRight.removeEventListener("click", moveRight)
+    sliderCards.forEach(elem => {
+        elem.removeEventListener('click', cardsClick)
+    })
 }
 
 const moveLeft = () => {
@@ -113,6 +128,9 @@ const moveLeft = () => {
     slider.classList.add("transition-left")
     btnLeft.removeEventListener("click", moveLeft)
     btnRight.removeEventListener("click", moveRight)
+    sliderCards.forEach(elem => {
+        elem.removeEventListener('click', cardsClick)
+    })
 }
 
 const createCardTemplate = () => {
@@ -135,10 +153,62 @@ slider.addEventListener("animationend", (animationEvent) => {
     }
     btnLeft.addEventListener("click", moveLeft);
     btnRight.addEventListener("click", moveRight);
+    sliderCards = document.querySelectorAll('.slider-item')
+    sliderCards.forEach(elem => {
+        elem.addEventListener('click', cardsClick)
+    })
 })
 
 
 /*----------sliderEND----------*/
 
+/*-------modal-----------------*/
 
+/* const modalChange = () => {
+    const currIndex = sliderCards.indexOf(elem)
+    console.log(currIndex)
+} */
+
+const cardsClick = (e) => {
+    const currIndex = Array.from(itemActive.children).indexOf(e.currentTarget)
+    const currPet = pets[slideArr[currIndex]]
+    cardImg.style.backgroundImage = `url(${currPet.img})`
+    cardName.innerHTML = currPet.name
+    cardType.innerHTML = currPet.type
+    cardBreed.innerHTML = currPet.breed
+    cardText.innerHTML = currPet.description
+    cardAge.innerHTML = currPet.age
+    cardInoculations.innerHTML = currPet.inoculations
+    cardDiseases.innerHTML = currPet.diseases
+    cardParasites.innerHTML = currPet.parasites
+    modal.classList.add('modal-block')
+    document.body.classList.add('body-hidden')
+}
+
+sliderCards.forEach((elem) => {
+    elem.addEventListener('click', cardsClick)
+    
+})
+
+cardClose.addEventListener('click', () => {
+    modal.classList.remove('modal-block')
+    document.body.classList.remove('body-hidden')
+})
+
+modal.addEventListener('click', (e) => {
+    if (e.target.classList.contains('modal')){
+        modal.classList.remove('modal-block')
+        document.body.classList.remove('body-hidden')
+    }
+})
+modal.addEventListener('mouseover', e => {
+    if (e.target.classList.contains('modal')){
+        cardClose.classList.add('close-hover')
+    }
+    else{
+        cardClose.classList.remove('close-hover')
+    }
+})
+
+/*-------modal-END-------------*/
 
