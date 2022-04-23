@@ -1,3 +1,4 @@
+
 const burger = document.querySelector('.header-burger')
 const burgerMenu = document.querySelector('.nav')
 const logo = document.querySelector('.logo')
@@ -9,6 +10,31 @@ const slider = document.querySelector('.items')
 const itemLeft = document.querySelector('#item-left')
 const itemRight = document.querySelector('#item-right')
 const itemActive = document.querySelector('#item-active')
+
+/*------предзагрузка картинок------*/
+
+
+const images = new Array();
+function preloadImages(images) {
+    images.forEach((image, i) => {
+        image = new Image();
+        image.src = images[i];
+    })
+}
+preloadImages([
+    '../../assets/images/pets-jennifer.jpg',
+    '../../assets/images/pets-sophia.jpg',
+    '../../assets/images/pets-woody.jpg',
+    '../../assets/images/pets-scarlett.jpg',
+    '../../assets/images/pets-katrine.jpg',
+    '../../assets/images/pets-timmy.jpg',
+    '../../assets/images/pets-freddie.jpg',
+    '../../assets/images/pets-charly.jpg']
+)
+
+
+/*------предзагрузка картинок КОНЕЦ------*/
+
 
 const getData = async (url) => await ((await fetch(url)).json());
 const pets = await getData('../../assets/pets.json');
@@ -23,15 +49,11 @@ while(slideArr.length < 3){
 }
 console.log(slideArr)
 
-const createCard = () => {
-    for (let i = 0; i < itemActive.children.length; i++){
-        itemActive.children[i].children[0].src = `../../assets/images/${pets[slideArr[i]].img.slice(20)}`
-        itemActive.children[i].children[1].innerHTML = pets[slideArr[i]].name
-    }
+
+for (let i = 0; i < itemActive.children.length; i++){
+    itemActive.children[i].children[0].src = pets[slideArr[i]].img
+    itemActive.children[i].children[1].innerHTML = pets[slideArr[i]].name
 }
-createCard()
-
-
 
 function toggleMenu() {
     burgerMenu.classList.toggle('nav-open')
