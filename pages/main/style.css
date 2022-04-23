@@ -1105,6 +1105,41 @@ h1{
         width: 260px;
         height: auto;
     }
+
+    .modal-card {
+        width: 240px;
+        height: 341px;
+        column-gap: 30px;
+        justify-content: center;
+        overflow: auto;
+    }
+    .card-name{
+        text-align: center;
+    }
+    .pet-type{
+        text-align: center;
+    }
+    .card-close{
+        right: -42px;
+        top: -53px;
+    }
+    .card-img {
+        display: none;
+    }
+    .card-info {
+        margin-top: 0;
+        width: 220px;
+        row-gap: 20px;
+    }
+    .card-text {
+        font-size: 13px;
+        line-height: 110%;
+        text-align: justify;
+    }
+    .card-list {
+        row-gap: 5px;
+    }
+
     @keyframes move-right {
         from {left: -270px;}
         to {left: -540px;}
