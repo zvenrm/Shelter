@@ -1111,7 +1111,7 @@ h1{
         height: 341px;
         column-gap: 30px;
         justify-content: center;
-        overflow: auto;
+        
     }
     .card-name{
         text-align: center;
@@ -1120,7 +1120,7 @@ h1{
         text-align: center;
     }
     .card-close{
-        right: -42px;
+        right: -32px;
         top: -53px;
     }
     .card-img {
@@ -1138,6 +1138,7 @@ h1{
     }
     .card-list {
         row-gap: 5px;
+        overflow: auto;
     }
 
     @keyframes move-right {
