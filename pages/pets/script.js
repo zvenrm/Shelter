@@ -62,7 +62,7 @@ for(let i = 0; i < 6; i++){
 
 console.log(commonArr)
 
-const screenWidth = window.screen.width
+const screenWidth = window.innerWidth
 
 const commonArraySlice = (elements, array) => {
     const arr = []

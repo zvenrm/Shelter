@@ -580,6 +580,7 @@ h1{
         row-gap: 40px;
         justify-content: center;
         align-items: center;
+        overflow: auto;
     }
     .nav-link{
         font-size: 32px;
