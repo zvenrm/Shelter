@@ -164,11 +164,6 @@ slider.addEventListener("animationend", (animationEvent) => {
 
 /*-------modal-----------------*/
 
-/* const modalChange = () => {
-    const currIndex = sliderCards.indexOf(elem)
-    console.log(currIndex)
-} */
-
 const cardsClick = (e) => {
     const currIndex = Array.from(itemActive.children).indexOf(e.currentTarget)
     const currPet = pets[slideArr[currIndex]]

@@ -24,9 +24,15 @@ html{
 body{
     font-family: 'Georgia';
 }
+
+.body-hidden {
+    overflow: hidden;
+}
+
 .header {
     position: sticky;
     top: 0;
+    z-index: 300;
     background: #FFFFFF;
 }
 .container{
@@ -262,6 +268,126 @@ h1{
     border-color: #FDDCC4;
     background-color: #FDDCC4;
 }
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(41, 41, 41, 0.6);
+    display: none;
+    z-index: 500;
+}
+.modal-block{
+    display: flex;
+    animation-name: modal-anim;
+    animation-duration: 0.7s;
+}
+.modal-card {
+    position: relative;
+    width: 900px;
+    height: 500px;
+    display: flex;
+    column-gap: 30px;
+    box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
+    border-radius: 9px;
+    background: #FAFAFA;
+}
+.card-close{
+    position: absolute;
+    right: -42px;
+    top: -53px;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    border: 2px solid #F1CDB3;
+    background-image: url('../../assets/icons/vector.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.card-close:hover{
+    border-color: #FDDCC4;
+    background-color: #FDDCC4;
+}
+.close-hover{
+    border-color: #FDDCC4;
+    background-color: #FDDCC4;
+}
+.card-img {
+    width: 500px;
+    height: 500px;
+    border-radius: 9px 0px 0px 9px;
+    background-image: url('../../assets/images/pets-jennifer.jpg');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.card-info {
+    margin-top: 50px;
+    width: 351px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+}
+
+.card-name {
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 130%;
+    letter-spacing: 0.06em;
+    color: #000000;
+    margin-bottom: 10px;
+}
+.pet-type{
+    font-size: 20px;
+    line-height: 115%;
+    letter-spacing: 0.06em;
+    color: #000000;
+}
+.card-text {
+    font-size: 15px;
+    line-height: 115%;
+    letter-spacing: 0.06em;
+    color: #000000;
+}
+.card-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    row-gap: 11px;
+}
+.card-item {
+    padding-left: 14px;
+    position: relative;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 110%;
+    letter-spacing: 0.06em;
+    color: #000000;
+}
+
+.card-item::before{
+    content: '';
+    display: block;
+    position: absolute;
+    top: 5px;
+    left: 0;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: #F1CDB3;
+}
+
+#age, #inoculations, #diseases, #parasites {
+    font-weight: 400;
+}
+
 .footer {
     background: url('../../assets/images/noise_lines_transparent.png'), radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%), #211F20;
 }
@@ -329,6 +455,31 @@ h1{
     text-decoration: none;
 }
 
+@keyframes blur-in {
+    from {opacity: 1;}
+    to {opacity: 0;}
+}
+
+@keyframes blur-out {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes modal-anim {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+.blur-in{
+    animation-name: blur-in;
+    animation-duration: 0.3s;
+}
+
+.blur-out{
+    animation-name: blur-out;
+    animation-duration: 0.3s;
+}
+
 @media (max-width: 1279px){
     .container{
         padding-left: 30px;
@@ -370,6 +521,28 @@ h1{
         flex-direction: column;
         justify-content: center;
         row-gap: 40px;
+    }
+    .modal-card {
+        width: 629px;
+        height: 350px;
+        column-gap: 11px;
+    }
+    .card-img {
+        width: 350px;
+        height: 350px;
+    }
+    .card-info {
+        margin-top: 10px;
+        width: 260px;
+        row-gap: 20px;
+    }
+    
+    .card-text {
+        font-size: 13px;
+        line-height: 110%;
+    }
+    .card-list {
+        row-gap: 5px;
     }
 }
 
@@ -462,5 +635,39 @@ h1{
     .footer-image img{
         width: 260px;
         height: auto;
+    }
+    .modal-card {
+        width: 240px;
+        height: 341px;
+        column-gap: 30px;
+        justify-content: center;
+        
+    }
+    .card-name{
+        text-align: center;
+    }
+    .pet-type{
+        text-align: center;
+    }
+    .card-close{
+        right: -32px;
+        top: -53px;
+    }
+    .card-img {
+        display: none;
+    }
+    .card-info {
+        margin-top: 0;
+        width: 220px;
+        row-gap: 20px;
+    }
+    .card-text {
+        font-size: 13px;
+        line-height: 110%;
+        text-align: justify;
+    }
+    .card-list {
+        row-gap: 5px;
+        overflow: auto;
     }
 }
