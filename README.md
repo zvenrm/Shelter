@@ -1,2 +1,1 @@
-Deploy
-https://zvenrm.github.io/Shelter/pages/main/
+[Deploy of the project](https://zvenrm.github.io/Shelter/pages/main/)
